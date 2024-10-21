@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>chamcong</class>
- <widget class="QMainWindow" name="chamcong">
+ <class>diemdanh</class>
+ <widget class="QMainWindow" name="diemdanh">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1001</width>
-    <height>798</height>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="windowNhanVien">
+    <widget class="QPushButton" name="windowSinhVien">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -68,10 +68,10 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="windowChamCong">
+    <widget class="QPushButton" name="windowDiemDanh">
      <property name="geometry">
       <rect>
-       <x>150</x>
+       <x>130</x>
        <y>0</y>
        <width>141</width>
        <height>51</height>
@@ -134,12 +134,78 @@
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QPushButton" name="windowLopHocPhan">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>0</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Lớp Học Phần</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="windowTinhDiem">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>0</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Tính Điểm</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>710</y>
+      <y>590</y>
       <width>641</width>
       <height>91</height>
      </rect>
@@ -147,7 +213,7 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="btnChamCong">
+    <widget class="QPushButton" name="btnDiemDanh">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -255,7 +321,7 @@
       <x>690</x>
       <y>390</y>
       <width>311</width>
-      <height>401</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="cursor">
@@ -318,29 +384,11 @@
       <string>Giới Tính:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>170</y>
-       <width>71</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Chức Vụ:</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>220</y>
+       <y>170</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -358,7 +406,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>270</y>
+       <y>220</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -376,7 +424,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>320</y>
+       <y>260</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -444,29 +492,11 @@
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lblChucVu">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>170</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QLabel" name="lblNgayDiemDanh">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>220</y>
+       <x>160</x>
+       <y>180</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -484,7 +514,7 @@
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>270</y>
+       <y>220</y>
        <width>171</width>
        <height>31</height>
       </rect>
@@ -501,8 +531,8 @@
     <widget class="QLabel" name="lblTrangThai">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>320</y>
+       <x>120</x>
+       <y>260</y>
        <width>151</width>
        <height>31</height>
       </rect>
