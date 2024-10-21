@@ -2,17 +2,33 @@ import mysql.connector
 
 class conndb:
     def __init__(self):
-        pass
+        self.host = 'localhost'
+        self.user = 'root'
+        self.password = ''
+        self.database = 'sinhvien_ai'
     
     def queryResult(self, strsql):
-        cnx = mysql.connector.connect(user='root', password='', host='127.0.0.1', database='sinhvien_ai')
-        conn = cnx.cursor()
-        conn.execute(strsql)
-        result = conn.fetchall()
-        return result
+        try:
+            cnx = mysql.connector.connect(user=self.user, password=self.password, host=self.host, database=self.database)
+            conn = cnx.cursor()
+            conn.execute(strsql)
+            result = conn.fetchall()
+            return result
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
+            return []
+        finally:
+            conn.close()
+            cnx.close()
     
     def queryExecute(self, strsql):
-        cnx = mysql.connector.connect(user='root', password='', host='127.0.0.1', database='sinhvien_ai')
-        conn = cnx.cursor()
-        conn.execute(strsql)
-        cnx.commit()
+        try:
+            cnx = mysql.connector.connect(user=self.user, password=self.password, host=self.host, database=self.database)
+            conn = cnx.cursor()
+            conn.execute(strsql)
+            cnx.commit()
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
+        finally:
+            conn.close()
+            cnx.close()
